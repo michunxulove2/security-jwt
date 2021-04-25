@@ -26,7 +26,7 @@ public class SecurityUserDetails extends SysUser implements UserDetails {
     public SecurityUserDetails(String userName, Collection<? extends GrantedAuthority> authorities) {
         this.authorities = authorities;
         this.setLoginName(userName);
-        String encode = new BCryptPasswordEncoder().encode(getPassword());
+        String encode = new BCryptPasswordEncoder().encode("123");
         this.setLoginPwd(encode);
     }
 
